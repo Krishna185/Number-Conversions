@@ -11,30 +11,25 @@ int main()
 	printf("*                                                     *\n");
 	printf("*******************************************************\n");
 	
-	printf("\nEnter choice :\nBinarytoDecimal = 0\nDecimaltoBinary = 1 : ");
+	printf("\n1.BinarytoDecimal\n2.DecimaltoBinary\n");
+	printf("Enter choice : ");
 	scanf("%d",&choice);
 
-	if(choice == 0 | choice == 1)
+	if(choice == 1 | choice == 2)
 	{
-		if(choice == 0)
-		{
-			printf("Enter the binary number : ");
-			scanf("%d",&number);
-		}
-		else
-		{
-			printf("Enter the Decimal number : ");
-			scanf("%d",&number);
-		}
 		switch(choice)
 		{
-			case 0 : result = BinarytoDecimal(number);
+			case 1 :  printf("Enter the Binary number : ");
+					  scanf("%d",&number);
+				      result = BinarytoDecimal(number);
 					  printf("The Decimal equivalent of %d : %d\n",number,result);					  
 					  break;
 
-			case 1 : result = DecimaltoBinary(number);
-					   printf("The Binary equivalent of %d : %d\n",number,result);
-					   break;
+			case 2 :  printf("Enter the Decimal number : ");
+					  scanf("%d",&number);
+					  result = DecimaltoBinary(number);
+					  printf("The Binary equivalent of %d : %d\n",number,result);
+					  break;
 		}
 	}
 	
